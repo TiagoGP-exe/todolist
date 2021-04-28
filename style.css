@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ECECEC;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #C4C4C4;
+    border-radius: 2px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: min(400px, 90vw);
+    background-color: #2D3748;
+    padding: 0rem 0rem 0rem 0rem;
+    border-radius: 1rem;
+}
+
+.card header {
+    color: aliceblue;
+    padding: 1rem;
+    font-size: 1.5rem;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    background-color: #4C8BEA;
+}
+
+.card .txtinput {
+    width: 100%;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    background-color: #101C30;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #35445F;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.card input[type="text"]:focus {
+    color: aliceblue;
+}
+
+.td ul, .td li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.td li {
+    background-color: #262e4c;
+    border-bottom: 1px solid #1c2340;
+    color: #b1b2c9;
+}
+
+.toDo {
+    width: 100%;
+}
+
+.toDo label {
+    cursor: pointer;
+    display: block;
+    line-height: 56px;
+    padding: 0 15px;
+    position: relative;
+}
+
+span {
+    max-width: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 30px;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.td label button {
+    display: none;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: normal;
+    color: aliceblue;
+    height: 18px;
+    width: 18px;
+    margin-top: 20px;
+    border: none;
+    opacity: 0.7;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+.td label:hover button {
+    display: block;
+}
+
+.td label button:hover {
+    opacity: 1;
+}
+
+.td label button {
+    border-radius: 100%;
+    background-color: #EC3758;
+}
+
+label .visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+li input {
+    display: none;
+}
+
+li input+span:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: #364169;
+    border: 1px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -1.75rem;
+    margin-right: 1rem;
+}
+
+li input:checked+span:before {
+    background-color: #455488;
+    box-sizing: border-box;
+    border: 4px solid #364169;
+}
+
+li input[type="checkbox"]:checked~span {
+    color: #586186;
+    text-decoration: line-through;
+}
+
+img {
+    margin-top: 0.5rem;
+    width: 2rem;
+}
